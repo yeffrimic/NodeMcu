@@ -9,8 +9,8 @@ servidor = net.createServer(net.TCP,1)
 servidor:listen(80,function(c) 
         c:on("receive",function (c,pl)
         c:send("<html>")
-         --   posSSID={string.find(pl,"SSID=")}
-         --   posPASSWORD={string.find(pl,"&PASSWORD=")}
+            posSSID={string.find(pl,"SSID=")}
+            posPASSWORD={string.find(pl,"&PASSWORD=")}
             if(posSSID[2]~= nil and posPASSWORD ~= nil) then
          --       print ("la posicion del ssid es = " .. posSSID[2])
          --       print ("la posicion del password es = " .. posPASSWORD[2])
