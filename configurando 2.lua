@@ -23,6 +23,7 @@
                     c:send ("<br>  el passwprd es = "..password1)
                     c:close()
                     collectgarbage();
+                    ssid1=string.gsub(ssid1,"+"," ")
                     wifi.setmode(wifi.STATION)
                     wifi.sta.config(ssid1,password1)
                     wifi.sta.connect()
